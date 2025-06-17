@@ -1,7 +1,5 @@
 package com.example.hrportal.ui.downloads;
 
-import android.app.DownloadManager;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
-import com.example.hrportal.R;
 import com.example.hrportal.databinding.FragmentDownloadsBinding;
 
 import java.io.File;
@@ -68,8 +65,6 @@ public class DownloadsFragment extends Fragment {
         button.setOnClickListener(v -> showOptionDialog(assetFileName, url));
     }
 
-
-
     private void showOptionDialog(String assetFileName, String url) {
         new android.app.AlertDialog.Builder(requireContext())
                 .setTitle("Select an Option")
@@ -85,20 +80,6 @@ public class DownloadsFragment extends Fragment {
     private void openUrlInBrowser(String url) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(browserIntent);
-    }
-
-
-
-    private void downloadPDF(String url) {
-        String fileName = Uri.parse(url).getLastPathSegment();
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setTitle("Downloading PDF");
-        request.setDescription("Saving to Downloads...");
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(requireContext(), Environment.DIRECTORY_DOWNLOADS, fileName);
-
-        DownloadManager manager = (DownloadManager) requireContext().getSystemService(Context.DOWNLOAD_SERVICE);
-        if (manager != null) manager.enqueue(request);
     }
 
     private void downloadPdfFromAssets(String assetFileName) {
