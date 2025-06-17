@@ -10,7 +10,6 @@ public class LinksViewModel extends ViewModel {
 
     public LinksViewModel() {
         mText = new MutableLiveData<>();
-        //mText.setValue("This is gallery fragment");
     }
 
     public LiveData<String> getText() {
