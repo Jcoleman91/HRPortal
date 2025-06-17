@@ -9,7 +9,26 @@
         android:id="@+id/nav_home"
         android:name="com.example.hrportal.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_announcements"
+            app:destination="@id/nav_announcements" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_links"
+            app:destination="@id/nav_links" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_downloads"
+            app:destination="@id/nav_downloads" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_announcements"
+        android:name="com.example.hrportal.ui.announcements.AnnouncementsFragment"
+        android:label="Announcements"
+        tools:layout="@layout/fragment_announcements" />
 
     <fragment
         android:id="@+id/nav_links"

@@ -33,12 +33,26 @@ public class MainActivity extends AppCompatActivity {
 
         // Passing each menu ID as a set of Ids
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_links, R.id.nav_downloads)
+                R.id.nav_home, R.id.nav_announcements, R.id.nav_links, R.id.nav_downloads)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        //want "Home" to always reload or refresh even if already selected
+        navigationView.setNavigationItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_home) {
+                navController.navigate(R.id.nav_home);
+                drawer.closeDrawers();
+                return true;
+            }
+            boolean handled = NavigationUI.onNavDestinationSelected(item, navController);
+            if (handled) {
+                drawer.closeDrawers();
+            }
+            return handled;
+        });
     }
 
     @Override

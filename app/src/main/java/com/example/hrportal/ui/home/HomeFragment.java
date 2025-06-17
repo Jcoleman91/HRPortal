@@ -13,43 +13,36 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.hrportal.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
-
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        //final TextView textView = binding.textHome;
-        //homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        Button edwardNoticeBtn = root.findViewById(R.id.edward_notice);
-        edwardNoticeBtn.setOnClickListener(v -> {
-            String url = "http://172.27.5.15/HRPortal/Downloads/FINALAnthemEdWardMemberNotice.pdf";
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-        });
-
-        Button anthemFactsBtn = root.findViewById(R.id.athem_facts);
-        anthemFactsBtn.setOnClickListener(v -> {
-            String url = "https://www.anthemfacts.com/";
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-        });
-
-
-        return root;
-    }
-
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        NavController navController = NavHostFragment.findNavController(this);
+
+        Button announcementsBtn = view.findViewById(R.id.home_announcements);
+        Button linksBtn = view.findViewById(R.id.home_links);
+        Button downloadsBtn = view.findViewById(R.id.home_downloads);
+
+        announcementsBtn.setOnClickListener(v ->
+                navController.navigate(R.id.action_nav_home_to_nav_announcements)
+        );
+
+        linksBtn.setOnClickListener(v ->
+                navController.navigate(R.id.action_nav_home_to_nav_links)
+        );
+
+        downloadsBtn.setOnClickListener(v ->
+                navController.navigate(R.id.action_nav_home_to_nav_downloads)
+        );
+
+        return view;
     }
 }
