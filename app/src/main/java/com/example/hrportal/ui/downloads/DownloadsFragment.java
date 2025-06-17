@@ -120,7 +120,7 @@ public class DownloadsFragment extends Fragment {
 
             Toast.makeText(getContext(), "Saved to Downloads", Toast.LENGTH_SHORT).show();
 
-            // Auto open
+            // Auto open the downloaded PDF
             Uri uri = FileProvider.getUriForFile(
                     requireContext(),
                     "com.example.hrportal.fileprovider",
