@@ -1,0 +1,32 @@
+>>> def getnum(input_file_path, output_file_path):
+...                 with open(input_file_path, 'r') as file, open(output_file_path, 'w') as outfile:
+...                                 lines = [line.strip() for line in file]
+...                                 name = ""
+...                                 per = 0.0
+...                                 number = ""
+...                                 tempNum = ""
+...                                 tempName = ""
+...                                 num = 0
+...                                 numCharacters = 0
+...                                 tempchar = 0
+...                                 for line in lines:
+...                                                 if line[0] == '>':
+...                                                                 tempNum = line[-4:]
+...                                                                 tempName = line[1:-5]
+...                                                                 num = 0
+...                                                                 tempchar = 0
+...                                                 else:
+...                                                                 for i in range(len(line)):
+...                                                                                 if line[i] == 'G' or line[i] == 'C':
+...                                                                                                 num +=1
+...                                                                                                 tempchar += 1
+...                                                                 percent = (num / tempchar) * 100
+...                                                                 if (percent > per and numCharacters <= tempchar):
+...                                                                                 name = tempName
+...                                                                                 number = tempNum
+...                                                                                 per = percent
+...                                                                                 numCharacters = tempchar
+...                                 print(name + '_' + number)
+...                                 print(f"{per:.6f}")
+...                                 outfile.write(name + '_' + number + '\n')
+...                                 outfile.write(f"{per:.6f}\n")

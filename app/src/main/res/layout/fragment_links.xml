@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.links.LinksFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.links.LinksFragment">
+
+        <Button
+            android:id="@+id/payroll_self_service"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="  Payroll Self Service"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/adp_work_force_pay_stub"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="ADP Work Force Now\n***Print Pay Stub***"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/payroll_self_service"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/wellness_warrior_nomination"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="wellness warrior nomination"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/adp_work_force_pay_stub"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/bluecross_blueshield"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="bluecross blueshield (medical &amp; dental)"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/wellness_warrior_nomination"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/fidelity_netbenefits"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="fidelity netbenefits (401k)"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/bluecross_blueshield"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/infinisource"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="infinisource\n(flexible spending)"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/fidelity_netbenefits"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/employee_benefits_open_enrollment"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="employee benefits open enrollment 2024"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/infinisource"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/mycigna"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="mycigna"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/employee_benefits_open_enrollment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/angioscreen_signup"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="angioscreen signup"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/mycigna"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/wellness_trivia"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="wellness trivia"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/mycigna"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

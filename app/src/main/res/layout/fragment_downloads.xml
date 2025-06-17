@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.downloads.DownloadsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/suggestion_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Suggestion Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/direct_deposit_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Direct Deposit Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/suggestion_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/state_tax_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Georgia State Tax Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/direct_deposit_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/job_transfer_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Job Transfer Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/state_tax_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/accident_claim_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Accident Claim Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/job_transfer_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/employee_handbook"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Employee Handbook"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/accident_claim_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/payroll_change"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Payroll Change Notice"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/employee_handbook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/beneficiary_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Beneficiary Designation Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/payroll_change"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/federal_tax_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Federal Tax Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/beneficiary_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/wellness_claim_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Wellness Claim Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/federal_tax_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/illness_claim_form"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/navy"
+            android:text="Critical Illness Claim Form"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/wellness_claim_form"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/preview_pdf_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/download_pdf_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <WebView
+            android:id="@+id/pdfWebView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
